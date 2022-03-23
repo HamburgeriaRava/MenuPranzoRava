@@ -1,0 +1,96 @@
+@font-face {
+  font-family: myFont;
+  src: url(AltonaSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: myFontItalic;
+  src: url(AltonaSans-Italic.ttf);
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	padding: 2%;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-auto-rows: minmax(2vh, auto);
+    background: black;
+	font-family: myFont;
+	font-size: 2.5vh;
+}
+
+.menu{
+	height: 82vh;
+	grid-column: 1;
+	grid-row: 1 / 43;
+	background: white;
+	border-radius: 50px;
+	padding: 2%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: scroll;
+}
+
+.nav{
+	grid-column: 1;
+	grid-row: 43/50;
+	background: white;
+	margin-top: 2%;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3.5vh;
+	font-weight: 700;
+}
+
+.panino{
+	height: auto;
+	width: 95%;
+	border-radius: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2%;
+	background-color: gray;
+	margin-top: 2%;
+}
+
+.nome{
+	font-size: 3.3vh;
+}
+
+.desc{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 2vh;
+	width: 95%;
+}
+
+.fotoPanino {
+	height: 10vh;
+	width: 10vh;
+	border: solid;
+}
+
+.ingredienti{
+	font-family: myFontItalic;
+    font-size: 2vh;
+    width: 70%;
+    min-height: 7vh;
+    margin: 3% 0;
+    text-align: left;
+    padding-left: 3%;
+    line-height: 3vh;
+}
+
+.prezzo{
+	font-size: 2vh;
+}
