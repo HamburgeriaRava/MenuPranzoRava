@@ -20,7 +20,6 @@ function addItemsToList(panino) {
     var _prezzo = document.createElement('h3');
     
     _content.className = 'panino';
-    _content.backgroundImage = "url('"+panino.url+"')";
     _contentOpacity.className = 'opacity';
     _nome.className = 'nome';
     _ingredienti.className = 'ingredienti';
