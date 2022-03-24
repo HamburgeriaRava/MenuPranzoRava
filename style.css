@@ -1,11 +1,6 @@
 @font-face {
   font-family: myFont;
-  src: url(AltonaSans-Regular.ttf);
-}
-
-@font-face {
-  font-family: myFontItalic;
-  src: url(AltonaSans-Italic.ttf);
+  src: url(Mortina.otf);
 }
 
 *{
@@ -15,7 +10,6 @@
 
 body{
 	padding: 2%;
-	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -49,6 +43,13 @@ body{
 	align-items: center;
 	font-size: 3.5vh;
 	font-weight: 700;
+	position: relative;
+}
+
+.back{
+	position: absolute;
+	font-size: 2vh;
+	left: 3%;
 }
 
 .panino{
@@ -101,17 +102,29 @@ body{
   top: -50%;
 }
 
-.ingredienti{
-	font-family: myFontItalic;
-    font-size: 2vh;
-    width: 70%;
-    min-height: 7vh;
-    margin: 3% 0;
-    text-align: left;
-    padding-left: 3%;
-    line-height: 3vh;
+.container{
+	height: 70vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
 }
 
-.prezzo{
-	font-size: 2vh;
+.paninoImg{
+	height: 30vh;
+}
+
+.paninoDesc{
+	  font-family: myFont;
+    font-size: 3vh;
+    width: 70%;
+    min-height: 7vh;
+    line-height: 3vh;
+    text-align: center;
+}
+
+.paninoPrezzo{
+	font-size: 3vh;
+	font-family: myFont;
 }

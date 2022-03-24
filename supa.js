@@ -20,6 +20,7 @@ function addItemsToList(panino) {
     var _prezzo = document.createElement('h3');
     
     _content.className = 'panino';
+    _content.setAttribute("onclick","ciao("+panino.id+")");
     _contentOpacity.className = 'opacity';
     _nome.className = 'nome';
     _ingredienti.className = 'ingredienti';
@@ -46,3 +47,7 @@ function addItemsToList(panino) {
 
 var result = FetchAllData();
 window.onload = result;
+
+function ciao(i){
+    window.open("panino.html?id="+i,"_self");
+}
