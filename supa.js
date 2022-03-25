@@ -91,6 +91,10 @@ function addItemsToListRow(item){
 
 }
 
+function beverage(){
+    console.log("ciaooooo");
+}
+
 
 var result = FetchAllData();
 window.onload = result;
@@ -105,14 +109,18 @@ async function openMenu(){
     var par = document.getElementById('par');
     if(a==0) {
         par.style.transform = 'rotate(-90deg)';
-        options.style.bottom = '9vh';
+        options.style.pointerEvents = 'auto';
+        options.style.bottom = '100%';
         options.style.height = '30vh';
+        options.style.opacity = '1';
         a=1;
     }
     else {
         par.style.transform = 'rotate(90deg)';
-        options.style.bottom = '3.6vh';
-        options.style.height = '0vh';
+        options.style.bottom = '50%';
+        options.style.height = '0.1vh';
+        options.style.opacity = '0';
+        options.style.pointerEvents = 'auto';
         a=0;
     }
 }
