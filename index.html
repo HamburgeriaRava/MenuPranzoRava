@@ -13,6 +13,13 @@
 
     <div class="nav">Hamburgeria Rava</div>
     <div id="component" class="menu">Panini</div>
+    <div class="menuOptions" id="menuOptions">
+        <div class="menuItem">Beverage</div>
+        <div class="menuItem">Dessert</div>
+        <div class="menuItem">Aperitivi</div>
+        <div class="menuItem" id="last">Bar</div>
+    </div>
+    <div class="subNav" onclick="openMenu()">Menu Pranzo <p id="par">&#10094</div>
     <script src="https://unpkg.com/@supabase/supabase-js"></script>
     <script>
         const { createClient } = supabase

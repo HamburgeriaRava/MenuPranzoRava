@@ -1,6 +1,6 @@
 @font-face {
   font-family: myFont;
-  src: url(Mortina.otf);
+  src: url(BlockBE.ttf);
 }
 
 *{
@@ -18,10 +18,10 @@ body{
 	font-size: 2.5vh;
 }
 
-#component{
+.menu{
 	overflow: scroll;
 	width: 95%;
-	height: 86.6vh;
+	height: 77.4vh;
 	background: white;
 	border-radius: 50px;
 	padding: 2%;
@@ -30,13 +30,11 @@ body{
 	font-size: 3vh;
 }
 
-.nav{
+.nav, .subNav{
 	width: 100%;
 	height: 8vh;
-	grid-column: 1;
-	grid-row: 43/50;
 	background: white;
-	margin-top: 1%;
+	margin-top: 2%;
 	border-radius: 40px;
 	display: flex;
 	justify-content: center;
@@ -46,13 +44,32 @@ body{
 	position: relative;
 }
 
-.back{
-	position: absolute;
-	font-size: 2vh;
-	left: 3%;
+.nav{
+	margin-top: 1%;
 }
 
-.panino{
+.subNav{
+	font-size: 2.5vh;
+	z-index: 4;
+	box-shadow: 0px -20px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+.subNav p {
+	margin-left: 5%;
+	font-size: 3vh;
+	font-weight: 700;
+	transform: rotate(90deg);
+	transition: 0.5s;
+}
+
+.back{
+	position: absolute;
+	font-size: 3vh;
+	font-weight: 700;
+	left: 5%;
+}
+
+.panino, .pietanza{
 	height: 13vh;
 	width: 90%;
 	border-radius: 30px;
@@ -67,6 +84,14 @@ body{
 	position: relative;
 }
 
+.pietanza{
+	height: 8vh;
+	flex-direction: row;
+	justify-content: space-between;
+	background: transparent;
+	border: solid;
+}
+
 .nome{
 	color: white;
 	font-size: 3.3vh;
@@ -77,6 +102,7 @@ body{
 	align-items: center;
 	justify-content: flex-start;
 	z-index: 2;
+	font-weight: 50;
 }
 
 .desc{
@@ -101,6 +127,50 @@ body{
   position: absolute;
   top: -50%;
 }
+
+.menuOptions{
+	position: absolute;
+	padding: 2%;
+	bottom: 3.6vh;
+	width: 92%;
+	height: 3vh;
+	background: white;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+  border-radius: 50px;
+  box-shadow: 0px -20px 20px 0px rgba(0, 0, 0, 0.5);
+  transition: 0.7s;
+  opacity: 1;
+}
+
+.menuItem{
+	width: 90%;
+	height: 12vh;
+	border-bottom: solid;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 3vh;
+}
+
+#last{
+	border: none;
+}
+/*Primi -------------------------- */
+
+.nomePietanza{
+	font-size: 3.3vh;
+	text-align: left;
+}
+
+.prezzoPietanza{
+	font-size: 3vh;
+}
+
+/*Pagina Panino -------------------------- */
 
 .container{
 	height: 70vh;
@@ -128,3 +198,4 @@ body{
 	font-size: 3vh;
 	font-family: myFont;
 }
+

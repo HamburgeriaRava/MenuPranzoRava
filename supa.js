@@ -2,10 +2,37 @@ async function FetchAllData() {
     let { data: Panini, error } = await supabase
   .from('Panini')
   .select('*');
+
+  let { data: Primi, error1 } = await supabase
+  .from('Primi')
+  .select('*');
+
+  let { data: Secondi, error2 } = await supabase
+  .from('Secondi')
+  .select('*');
+
+  let { data: Contorni, error3 } = await supabase
+  .from('Contorni')
+  .select('*');
   
   Panini.forEach(async (item, index, arr) => {
     console.log(item.Nome);
     addItemsToList(item);
+  });
+
+  Primi.forEach(async (item, index, arr) => {
+    console.log(item.Nome);
+    addItemsToListRow(item);
+  });
+
+  Secondi.forEach(async (item, index, arr) => {
+    console.log(item.Nome);
+    addItemsToListRow(item);
+  });
+
+  Contorni.forEach(async (item, index, arr) => {
+    console.log(item.Nome);
+    addItemsToListRow(item);
   });
 }
 
@@ -44,10 +71,48 @@ function addItemsToList(panino) {
     div.append(_content);
 }
 
+function addItemsToListRow(item){
+    var div = document.getElementById('component');
+    var _nome = document.createElement('h1');
+    var _prezzo = document.createElement('h1');
+    var _content = document.createElement('div');
+    _content.className = 'pietanza';
+    _nome.className = 'nomePietanza';
+    _prezzo.className = 'prezzoPietanza';
+
+    _nome.innerHTML = item.Nome;
+    _prezzo.innerHTML = item.Prezzo;
+
+    _content.append(_nome);
+    _content.append(_prezzo);
+    div.append(_content);
+
+
+
+}
+
 
 var result = FetchAllData();
 window.onload = result;
 
 function ciao(i){
     window.open("panino.html?id="+i,"_self");
+}
+
+var a = 0;
+async function openMenu(){
+    var options = document.getElementById('menuOptions');
+    var par = document.getElementById('par');
+    if(a==0) {
+        par.style.transform = 'rotate(-90deg)';
+        options.style.bottom = '9vh';
+        options.style.height = '30vh';
+        a=1;
+    }
+    else {
+        par.style.transform = 'rotate(90deg)';
+        options.style.bottom = '3.6vh';
+        options.style.height = '0vh';
+        a=0;
+    }
 }
